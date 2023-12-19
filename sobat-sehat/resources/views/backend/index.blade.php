@@ -7,7 +7,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Profil Admin Sobat Sehat</h1>
+            <h1>Profil Admin</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -34,7 +34,7 @@
                        alt="User profile picture">
                 </div>
 
-                <h3 class="profile-username text-center">Nama Admin</h3>
+                <h3 class="profile-username text-center">Jeruk</h3>
 
                 <p class="text-muted text-center">Administrator</p>
 
@@ -62,21 +62,21 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <strong><i class="fas fa-book mr-1"></i> Nama Lengkap</strong>
+                <strong><i class="fas fa-address-card"></i> Nama Lengkap</strong>
 
                 <p class="text-muted">
-                  "Nama Admin"
+                  Kelompok 5 Jeruk
                 </p>
 
                 <hr>
 
-                <strong><i class="fas fa-map-marker-alt mr-1"></i> Username</strong>
+                <strong><i class="fas fa-at"></i> Username</strong>
 
-                <p class="text-muted">@hasnasya_</p>
+                <p class="text-muted">@jeruk5_rpl</p>
 
                 <hr>
 
-                <strong><i class="far fa-file-alt mr-1"></i> Password</strong>
+                <strong><i class="fas fa-lock"></i> Password</strong>
 
                 <p class="text-muted">********</p>
               </div>

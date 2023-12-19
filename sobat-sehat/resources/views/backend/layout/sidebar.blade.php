@@ -10,9 +10,9 @@
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="info">
+        <div class="info nav-item">
           <a href="{{ url('/dashboard')}}" class="d-block">
-            <i class="fa fa-user-circle" aria-hidden="true"></i>
+            <i class="nav-icon fa fa-user-circle" aria-hidden="true"></i>
                Dashboard Admin</a>
         </div>
       </div>
@@ -24,20 +24,20 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="{{ url('/dashboard/kontributor')}}" class="nav-link">
-              <i class="far fa-circle nav-icon"></i>
-              <p>Daftar Kontributor</p>
+              <i class="nav-icon fas fa-users"></i>
+              <p> Daftar Kontributor</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="{{ url('/dashboard/jadwal')}}" class="nav-link">
-              <i class="far fa-circle nav-icon"></i>
-              <p>Daftar Jadwal</p>
+              <i class="nav-icon far fa-calendar-alt"></i>
+              <p> Daftar Jadwal</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="{{ url('/dashboard/lokasi')}}" class="nav-link">
-              <i class="far fa-circle nav-icon"></i>
-              <p>Daftar Lokasi</p>
+              <i class="nav-icon fas fa-map-marked-alt"></i>
+              <p> Daftar Lokasi</p>
             </a>
           </li>
           <li class="nav-item">
@@ -64,7 +64,7 @@
       <div class="user-panel text-center fixed-bottom">
         <div class="info">
           <a href="{{ url('../home')}}" class="d-block">
-            <i class="fa fa-power-off" aria-hidden="true"></i>
+            <i class="nav-icon fa fa-power-off" aria-hidden="true"></i>
                Log Out</a>
         </div>
       </div>

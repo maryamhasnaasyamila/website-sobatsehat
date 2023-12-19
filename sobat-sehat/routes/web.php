@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\JadwalController;
+use App\Http\Controllers\LokasiController;
+use App\Http\Controllers\KontributorController;
+
 
 
 
@@ -27,3 +31,11 @@ Route::get('/home',
 Route::get('/dashboard', 
 [DashboardController::class, 'index']);
 
+Route::get('/dashboard/kontributor', 
+[KOntributorController::class, 'kontributor']);
+
+Route::get('/dashboard/jadwal', 
+[JadwalController::class, 'jadwal']);
+
+Route::get('/dashboard/lokasi', 
+[LokasiController::class, 'lokasi']);

@@ -13,6 +13,7 @@ class KontributorController extends Controller
     public function index()
     {
         //
+        return view('backend.kontributor.index');
     }
 
     /**

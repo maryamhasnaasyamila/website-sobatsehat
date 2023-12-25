@@ -13,7 +13,7 @@
     
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="{{asset('assets/img/hero-img.png')}}" class="img-fluid animated" alt="">
+          <img src="{{asset('assets/img/landingpage1.png')}}" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
@@ -27,7 +27,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>  Acara Terkini</h2>
+          <h2>  Event Terkini</h2>
         </div>
 
     {{-- BARIS PERTAMA --}}

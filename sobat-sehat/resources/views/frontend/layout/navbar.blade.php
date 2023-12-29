@@ -43,7 +43,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrolltso" href="#main">Event</a></li>
-          <li><a class="nav-link" href=""><i class="bi bi-person-circle"></i></a></li>
+          <li><a class="nav-link" href="{{ url('/login') }}"><i class="bi bi-person-circle"></i></a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

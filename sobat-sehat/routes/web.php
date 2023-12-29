@@ -6,6 +6,9 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\LokasiController;
 use App\Http\Controllers\KontributorController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
+use Illuminate\Support\Facades\Auth;
 
 
 
@@ -25,14 +28,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+
 Route::get('/home', 
 [HomeController::class, 'index']);
 
-Route::get('/dashboard', 
-[DashboardController::class, 'index']);
+// Route::get('/dashboard', 
+// [DashboardController::class, 'index']);
 
 Route::get('/dashboard/kontributor', 
-[KOntributorController::class, 'kontributor']);
+[KontributorController::class, 'kontributor']);
 
 Route::get('/dashboard/jadwal', 
 [JadwalController::class, 'jadwal']);

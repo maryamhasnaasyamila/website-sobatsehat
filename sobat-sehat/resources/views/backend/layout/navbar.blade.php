@@ -31,55 +31,64 @@
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="{{asset('backend/assets/dist/img/AdminLTELogo.png')}}" alt="AdminLTELogo" height="60" width="60">
+    <img src="{{ asset('backend/assets/dist/img/logo-sobat-sehat.png') }}" alt="image">
   </div>
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
-    <ul class="navbar-nav">
+      
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul>
+
+      <!-- Right navbar links -->
+      {{-- <ul class="navbar-nav ml-auto">
+        <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" id="profileDropdown" href="#"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="nav-profile-img">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <span class="availability-status online"></span>
+                </div>
+            </a>
+              <!-- Notifications Dropdown Menu -->
+            <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                <div class="dropdown-divider"></div>
+                <li class="nav-item">
+                  <a class="dropdown-item" href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                    <i class="mdi mdi-logout me-2 text-primary"></i>
+                      {{ __('Logout') }}
+                  </a>
+          
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                      @csrf
+                  </form>
+          
+                </li>
+            </div>
+        </li>
+      </ul> --}}
+      
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{ url('/dashboard')}}" class="nav-link">Dashboard</a>
+        <a class="dropdown-item" href="{{ route('logout') }}"
+          onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">
+            <i class="nav-icon fa fa-power-off" aria-hidden="true"></i>
+          {{ __('Logout') }}
+        </a>
+        
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+        </form>
       </li>
     </ul>
 
-    <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-      <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-item dropdown-header">15 Notifications</span>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> 4 new messages
-            <span class="float-right text-muted text-sm">3 mins</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> 8 friend requests
-            <span class="float-right text-muted text-sm">12 hours</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-file mr-2"></i> 3 new reports
-            <span class="float-right text-muted text-sm">2 days</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ url('/dashboard/admin')}}" role="button">
-          <i class="fa fa-user-circle" aria-hidden="true"></i>
-        </a>
-      </li>
-    </ul>
   </nav>
   <!-- /.navbar -->

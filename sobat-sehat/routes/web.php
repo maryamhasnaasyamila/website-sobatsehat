@@ -47,12 +47,51 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     // Route dashboard
     Route::get('/' , [DashboardController::class, 'index'])->name('dashboard');
 
+    // Kontributor
     Route::get('/kontributor',
-    [KontributorController::class, 'kontributor']);
+    [KontributorController::class, 'index']);
+    Route::get('/kontributor/create',
+    [KontributorController::class, 'create']);
+    Route::post('/kontributor/store',
+    [KontributorController::class, 'store']);
+    Route::delete('/kontributor/destroy/{id}',
+    [KontributorController::class, 'destroy']);
+    Route::get('/kontributor/edit/{id}',
+    [KontributorController::class, 'edit']);
+    Route::put('/kontributor/update/{id}',
+    [KontributorController::class, 'update']);
+    Route::get('/kontributor/show/{id}',
+    [KontributorController::class, 'show']);
 
+    // Jadwal
     Route::get('/jadwal',
-    [JadwalController::class, 'jadwal']);
+    [JadwalController::class, 'index']);
+    Route::get('/jadwal/create',
+    [JadwalController::class, 'create']);
+    Route::post('/jadwal/store',
+    [JadwalController::class, 'store']);
+    Route::delete('/jadwal/destroy/{id}',
+    [JadwalController::class, 'destroy']);
+    Route::get('/jadwal/edit/{id}',
+    [JadwalController::class, 'edit']);
+    Route::put('/jadwal/update/{id}',
+    [JadwalController::class, 'update']);
+    Route::get('/jadwal/show/{id}',
+    [JadwalController::class, 'show']);
 
+    // Lokasi
     Route::get('/lokasi',
-    [LokasiController::class, 'lokasi']);
+    [LokasiController::class, 'index']);
+    Route::get('/lokasi/create',
+    [LokasiController::class, 'create']);
+    Route::post('/lokasi/store',
+    [LokasiController::class, 'store']);
+    Route::delete('/lokasi/destroy/{id}',
+    [LokasiController::class, 'destroy']);
+    Route::get('/lokasi/edit/{id}',
+    [LokasiController::class, 'edit']);
+    Route::put('/lokasi/update/{id}',
+    [LokasiController::class, 'update']);
+    Route::get('/lokasi/show/{id}',
+    [LokasiController::class, 'show']);
 });

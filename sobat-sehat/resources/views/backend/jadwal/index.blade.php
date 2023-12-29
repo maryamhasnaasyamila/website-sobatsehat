@@ -1,6 +1,6 @@
 @extends('backend.layout.jadwal')
 @section('content')
-        <div class="content-wrapper">
+        {{-- <div class="content-wrapper">
             <div class="page-header">
           <h3 class="page-title">
             <span class="page-title-icon bg-gradient-primary text-white me-2">
@@ -40,7 +40,7 @@
                       <tbody>
                             @foreach ($apotek as $apt)
                             <tr>
-                                
+
                               <td> {{ $loop->iteration }} </td>
                               <td> {{ $apt->name }} </td>
                               <td> {{ $apt->alamat }} </td>
@@ -62,5 +62,5 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> --}}
 @endsection

@@ -14,7 +14,10 @@ class LokasiController extends Controller
     public function index()
     {
         //
-        return view('backend.lokasi.index');
+        $lokasi = Lokasi::all();
+        return view('backend.lokasi.index', [
+            'lokasi' =>  $lokasi
+        ]);
     }
 
     /**
@@ -23,6 +26,7 @@ class LokasiController extends Controller
     public function create()
     {
         //
+        return view('backend.lokasi.create');
     }
 
     /**
@@ -31,6 +35,14 @@ class LokasiController extends Controller
     public function store(Request $request)
     {
         //
+        $validated = $request->validate([
+            'nama_lokasi' => 'required|min:3|max:100',
+            'alamat' => 'required|min:5|max:100',
+            'kota' => 'required|min:3|max:100',
+        ]);
+        // mengirim data ke model
+        Lokasi::create($validated);
+        return redirect('/dashboard/lokasi');
     }
 
     /**
@@ -39,6 +51,10 @@ class LokasiController extends Controller
     public function show(string $id)
     {
         //
+        $lokasi = Lokasi::find($id);
+        return view('backend.lokasi.show', [
+            'lokasi' => $lokasi
+        ]);
     }
 
     /**
@@ -47,6 +63,10 @@ class LokasiController extends Controller
     public function edit(string $id)
     {
         //
+        $lokasi = Lokasi::find($id);
+        return view('backend.lokasi.edit', [
+            'lokasi' => $lokasi
+        ]);
     }
 
     /**
@@ -55,6 +75,16 @@ class LokasiController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $lokasi = Lokasi::find($id);
+        $validated = $request->validate([
+            'nama_lokasi' => 'required|min:3|max:100',
+            'alamat' => 'required|min:5|max:100',
+            'kota' => 'required|min:3|max:100',
+        ]);
+
+        $lokasi->update($validated);
+        return redirect('/dashboard/lokasi')->with('success', 'Data berhasil di edit');
+
     }
 
     /**
@@ -62,6 +92,9 @@ class LokasiController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        // mencari data berdasarkan id
+        $lokasi = Lokasi::find($id);
+        $lokasi->delete();
+        return redirect('/dashboard/lokasi');
     }
 }

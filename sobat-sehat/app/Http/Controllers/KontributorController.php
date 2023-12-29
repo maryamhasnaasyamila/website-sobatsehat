@@ -14,7 +14,10 @@ class KontributorController extends Controller
     public function index()
     {
         //
-        return view('backend.kontributor.index');
+        $kontributor = Kontributor::all();
+        return view('backend.kontributor.index', [
+            'kontributor' =>  $kontributor
+        ]);
     }
 
     /**
@@ -23,6 +26,7 @@ class KontributorController extends Controller
     public function create()
     {
         //
+        return view('backend.kontributor.create');
     }
 
     /**
@@ -31,6 +35,15 @@ class KontributorController extends Controller
     public function store(Request $request)
     {
         //
+        $validated = $request->validate([
+            'nama_kontributor' => 'required|min:3|max:100',
+            'username' => 'required|min:5|max:100',
+            'password' => 'required|min:3|max:20',
+            'email' => 'required|email',
+        ]);
+        // mengirim data ke model
+        Kontributor::create($validated);
+        return redirect('/dashboard/kontributor');
     }
 
     /**
@@ -39,29 +52,50 @@ class KontributorController extends Controller
     public function show(string $id)
     {
         //
+        $kontributor = Kontributor::find($id);
+        return view('backend.kontributor.show', [
+            'kontributor' => $kontributor
+        ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
-    {
-        //
-    }
+    // public function edit(string $id)
+    // {
+    //     //
+    //     $kontributor = Kontributor::find($id);
+    //     return view('backend.kontributor.edit', [
+    //         'kontributor' => $kontributor
+    //     ]);
+    // }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
+    // public function update(Request $request, string $id)
+    // {
+    //     //
+    //     $kontributor = Kontributor::find($id);
+    //     $validated = $request->validate([
+    //         'nama_kontributor' => 'required|min:3|max:100',
+    //         'username' => 'required|min:5|max:100',
+    //         'password' => 'required|min:3|max:20',
+    //         'email' => 'required|email',
+    //     ]);
+
+    //     $kontributor->update($validated);
+    //     return redirect('/dashboard/kontributor')->with('success', 'Data berhasil di edit');
+    // }
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        //
+        // mencari data berdasarkan id
+        $kontributor = Kontributor::find($id);
+        $kontributor->delete();
+        return redirect('/dashboard/kontributor');
     }
 }

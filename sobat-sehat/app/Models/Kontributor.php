@@ -9,6 +9,6 @@ class Kontributor extends Model
 {
     use HasFactory;
     protected $table = 'kontributor';
-    protected $fillable = ['nama_kontributor', 'username', 'password', 'email', 'notelp', 'tgl_lahir'];
+    protected $fillable = ['nama_kontributor', 'username', 'password', 'email'];
     public $timestamps = false;
 }

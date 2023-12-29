@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\KOntributor;
+use App\Models\Kontributor;
 
 class KontributorController extends Controller
 {

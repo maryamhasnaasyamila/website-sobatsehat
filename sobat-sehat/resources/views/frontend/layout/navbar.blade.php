@@ -34,7 +34,7 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
-      
+
       <h1 class="logo me-auto"><a href="index.html">Sobat Sehat</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -43,7 +43,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrolltso" href="#main">Event</a></li>
-          <li><a class="nav-link" href="{{ url('/login') }}"><i class="bi bi-person-circle"></i></a></li>
+          <li><a class="nav-link" href="{{ route("login") }}"><i class="bi bi-person-circle"></i></a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

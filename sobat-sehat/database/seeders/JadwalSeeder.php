@@ -17,7 +17,7 @@ class JadwalSeeder extends Seeder
         Jadwal::create([
             'nama_acara' => 'Makrab NF22',
             'penyelenggara' => 'HMPSTI STT-NF',
-            'tanggal' => '2023-12-25',
+            'tanggal' => 2023-12-25,
             'lokasi' => 'Kampus B STT-NF',
             'kota' => 'Jakarta Selatan',
         ]);

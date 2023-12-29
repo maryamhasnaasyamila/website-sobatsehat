@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama_acara');
             $table->string('penyelenggara');
-            $table->string('tanggal');
+            $table->date('tanggal');
             $table->string('lokasi');
             $table->string('kota');
             $table->timestamps();

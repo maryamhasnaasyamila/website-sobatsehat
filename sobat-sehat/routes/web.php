@@ -24,24 +24,35 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Auth::routes();
-Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
-
-Route::get('/home', 
+Route::get('/',
 [HomeController::class, 'index']);
 
-// Route::get('/dashboard', 
+Auth::routes();
+
+Route::get('/home',
+[HomeController::class, 'index']);
+
+// Route::get('/dashboard',
 // [DashboardController::class, 'index']);
 
-Route::get('/dashboard/kontributor', 
-[KontributorController::class, 'kontributor']);
 
-Route::get('/dashboard/jadwal', 
-[JadwalController::class, 'jadwal']);
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
 
-Route::get('/dashboard/lokasi', 
-[LokasiController::class, 'lokasi']);
+// Route::post('login', function () {[auth]})->name("login.attempt");
+
+
+Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
+    // Route dashboard
+    Route::get('/' , [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::get('/kontributor',
+    [KontributorController::class, 'kontributor']);
+
+    Route::get('/jadwal',
+    [JadwalController::class, 'jadwal']);
+
+    Route::get('/lokasi',
+    [LokasiController::class, 'lokasi']);
+});

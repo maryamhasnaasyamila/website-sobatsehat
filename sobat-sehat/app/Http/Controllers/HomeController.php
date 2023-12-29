@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Jadwal;
 use App\Models\Lokasi;
-use App\Models\KOntributor;
+use App\Models\Kontributor;
 
 class HomeController extends Controller
 {

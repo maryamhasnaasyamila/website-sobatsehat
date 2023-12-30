@@ -60,7 +60,6 @@
               <i class="nav-icon fas fa-search"></i>
               <p>
                 Search
-                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
           </li>

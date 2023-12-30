@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nama_kontributor');
             $table->string('username');
             $table->string('password');
+            $table->string('email');
             $table->timestamps();
         });
     }

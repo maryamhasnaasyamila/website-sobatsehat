@@ -56,10 +56,10 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     [KontributorController::class, 'store']);
     Route::delete('/kontributor/destroy/{id}',
     [KontributorController::class, 'destroy']);
-    Route::get('/kontributor/edit/{id}',
-    [KontributorController::class, 'edit']);
-    Route::put('/kontributor/update/{id}',
-    [KontributorController::class, 'update']);
+    // Route::get('/kontributor/edit/{id}',
+    // [KontributorController::class, 'edit']);
+    // Route::put('/kontributor/update/{id}',
+    // [KontributorController::class, 'update']);
     Route::get('/kontributor/show/{id}',
     [KontributorController::class, 'show']);
 

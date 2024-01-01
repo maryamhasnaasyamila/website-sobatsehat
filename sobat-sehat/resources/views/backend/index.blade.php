@@ -92,4 +92,8 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+  @if (Auth::user()->role != "admin")
+  <meta http-equiv="refresh" content="0; url=/dashboard/kontributor">
+  {{abort(403)}}
+  @endif
 @endsection

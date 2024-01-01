@@ -15,7 +15,29 @@ class HomeController extends Controller
     public function index()
     {
         //
-        return view('frontend.home');
+        $jadwal = Jadwal::all();
+        return view('frontend.home', ['jadwal' => $jadwal, 'tanggal' => "", 'kota' => ""]);
+    }
+    public function search(Request $request)
+    {
+        if ($request->kota == null) {
+            $jadwal = Jadwal::where('tanggal', $request->tanggal)->get();
+        } elseif ($request->tanggal == null) {
+            // Filter kota dengan "LIKE"
+            $jadwal = Jadwal::whereHas('lokasi', function ($query) use ($request) {
+                $query->where('kota', 'LIKE', '%' . $request->kota . '%');
+            })->get();
+        } else {
+            // Keduanya tanggal dan kota diisi
+            $jadwal = Jadwal::where('tanggal', $request->tanggal)
+                ->whereHas('lokasi', function ($query) use ($request) {
+                    $query->where('kota', 'LIKE', '%' . $request->kota . '%');
+                })
+                ->get();
+        }
+
+
+        return view('frontend.home', ['jadwal' => $jadwal, 'tanggal' => $request->tanggal, "kota" => $request->kota]);
     }
 
     /**

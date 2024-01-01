@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('nama_acara');
             $table->string('penyelenggara');
             $table->date('tanggal');
-            $table->string('lokasi');
-            $table->string('kota');
+            $table->unsignedBigInteger('lokasi_id');
+            $table->foreign('lokasi_id')->references('id')->on('lokasi');
             $table->timestamps();
         });
     }

@@ -27,6 +27,8 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/',
 [HomeController::class, 'index']);
 
+Route::post("/", [HomeController::class, "search"]);
+
 Auth::routes();
 
 Route::get('/home',

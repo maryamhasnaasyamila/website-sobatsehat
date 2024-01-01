@@ -9,7 +9,10 @@ class Jadwal extends Model
 {
     use HasFactory;
     protected $table = 'jadwal';
-    protected $fillable = ['nama_acara', 'penyelenggara', 'tanggal', 'lokasi', 'kota'];
-    public $timestamps = false;
+    protected $guarded = ['id'];
+        
+    public function lokasi(){
+        return $this->belongsTo(Lokasi::class);
+    }
 }
 

@@ -18,8 +18,7 @@ class JadwalSeeder extends Seeder
             'nama_acara' => 'Makrab NF22',
             'penyelenggara' => 'HMPSTI STT-NF',
             'tanggal' => "2023-12-25",
-            'lokasi' => 'Kampus B STT-NF',
-            'kota' => 'Jakarta Selatan',
+            'lokasi_id' => 1,
         ]);
     }
 }

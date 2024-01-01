@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Lokasi;
 use Illuminate\Http\Request;
 use App\Models\Jadwal;
 
@@ -26,7 +27,8 @@ class JadwalController extends Controller
     public function create()
     {
         //
-        return view('backend.jadwal.create');
+        $lokasi = Lokasi::all();
+        return view('backend.jadwal.create', compact('lokasi'));
     }
 
     /**
@@ -36,11 +38,10 @@ class JadwalController extends Controller
     {
         //
         $validated = $request->validate([
-            'nama_jadwal' => 'required|min:3|max:100',
+            'nama_acara' => 'required|min:3|max:100',
             'penyelenggara' => 'required|min:5|max:100',
             'tanggal' => 'required|date',
-            'lokasi' => 'required|min:3|max:100',
-            'kota' => 'required|min:3|max:50',
+            'lokasi_id' => 'required',
 
 
         ]);
@@ -68,8 +69,10 @@ class JadwalController extends Controller
     {
         //
         $jadwal = Jadwal::find($id);
+        $lokasi = Lokasi::all();
         return view('backend.jadwal.edit', [
-            'jadwal' => $jadwal
+            'jadwal' => $jadwal,
+            'lokasi' => $lokasi,
         ]);
     }
 
@@ -81,13 +84,10 @@ class JadwalController extends Controller
         //
         $jadwal = Jadwal::find($id);
         $validated = $request->validate([
-            'nama_jadwal' => 'required|min:3|max:100',
+            'nama_acara' => 'required|min:3|max:100',
             'penyelenggara' => 'required|min:5|max:100',
             'tanggal' => 'required|date',
-            'lokasi' => 'required|min:3|max:100',
-            'kota' => 'required|min:3|max:50',
-
-
+            'lokasi_id' => 'required',
         ]);
 
         $jadwal->update($validated);

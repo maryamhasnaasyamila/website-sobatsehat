@@ -8,7 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Lokasi extends Model
 {
     use HasFactory;
-    protected $table = 'kontributor';
+    protected $table = 'lokasi';
     protected $fillable = ['nama_lokasi', 'alamat', 'kota'];
     public $timestamps = false;
+
+    public function jadwal(){
+        return $this->hasMany(Jadwal::class);
+    }
 }

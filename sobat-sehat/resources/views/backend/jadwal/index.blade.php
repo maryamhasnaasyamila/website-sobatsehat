@@ -51,8 +51,8 @@
                             <td> {{ $jdwl->nama_acara }} </td>
                             <td> {{ $jdwl->penyelenggara }} </td>
                             <td> {{ $jdwl->tanggal }} </td>
-                            <td> {{ $jdwl->lokasi }} </td>
-                            <td> {{ $jdwl->kota }} </td>
+                            <td> {{ $jdwl->lokasi->nama_lokasi }} </td>
+                            <td> {{ $jdwl->lokasi->kota }} </td>
                             <td>
                                 <a href="{{ url('/dashboard/jadwal/show', $jdwl->id) }}" class="btn btn-sm btn-info">View</a>
                                 <a href="{{ url('/dashboard/jadwal/edit', $jdwl->id) }}" class="btn btn-sm btn-warning">Edit</a>

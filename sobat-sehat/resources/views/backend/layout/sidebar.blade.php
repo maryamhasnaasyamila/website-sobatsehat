@@ -17,6 +17,8 @@
         </div>
       </div> --}}
 
+      @if (Auth::user()->role == "admin")
+
       <nav class="mt-2">
         <div class="user-panel">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -31,6 +33,7 @@
         </ul>
         </div>
       </nav>
+      @endif
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">

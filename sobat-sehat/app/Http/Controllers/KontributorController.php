@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
-use App\Models\Kontributor;
 
 class KontributorController extends Controller
 {
@@ -14,7 +14,7 @@ class KontributorController extends Controller
     public function index()
     {
         //
-        $kontributor = Kontributor::all();
+        $kontributor = User::where('role', "kontributor")->get();
         return view('backend.kontributor.index', [
             'kontributor' =>  $kontributor
         ]);
@@ -36,13 +36,14 @@ class KontributorController extends Controller
     {
         //
         $validated = $request->validate([
-            'nama_kontributor' => 'required|min:3|max:100',
-            'username' => 'required|min:5|max:100',
+            'name' => 'required|min:3|max:100',
             'password' => 'required|min:3|max:20',
             'email' => 'required|email',
         ]);
         // mengirim data ke model
-        Kontributor::create($validated);
+        $validated['role'] = "kontributor";
+        $validated['password'] = bcrypt($validated['password']);
+        User::create($validated);
         return redirect('/dashboard/kontributor');
     }
 
@@ -52,7 +53,7 @@ class KontributorController extends Controller
     public function show(string $id)
     {
         //
-        $kontributor = Kontributor::find($id);
+        $kontributor = User::find($id);
         return view('backend.kontributor.show', [
             'kontributor' => $kontributor
         ]);
@@ -94,7 +95,7 @@ class KontributorController extends Controller
     public function destroy(string $id)
     {
         // mencari data berdasarkan id
-        $kontributor = Kontributor::find($id);
+        $kontributor = User::find($id);
         $kontributor->delete();
         return redirect('/dashboard/kontributor');
     }

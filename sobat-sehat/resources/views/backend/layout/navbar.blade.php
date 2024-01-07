@@ -85,8 +85,8 @@
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">
-                        Role : {{ Auth::user()->role }}
-                        <i class="nav-icon fa fa-power-off" aria-hidden="true"></i>
+                        Role: {{ Auth::user()->role }}
+                        <i style="margin-left:3vw;" class="nav-icon fa fa-power-off" aria-hidden="true"></i>
 
                         {{ __('Logout') }}
                     </a>

@@ -11,7 +11,7 @@
                 <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
                     data-aos="fade-up" data-aos-delay="200">
                     <h1>Bersama Sobat Sehat</h1>
-                    <h2>sobat sehat lestarikan budaya dan tingkatkan kesehatan indonesia!</h2>
+                    <h2>Lestarikan budaya dan tingkatkan kesehatan indonesia!</h2>
 
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
@@ -35,13 +35,13 @@
                         @csrf
                         <div class="row">
                             <div class="col-5">
-                                <input type="date" class="form-control" value="{{!$tanggal ? "" : $tanggal}}" name="tanggal" placeholder="masukan tanggal">
+                                <input type="date" class="form-control" value="{{!$tanggal ? "" : $tanggal}}" name="tanggal" placeholder="Cari tanggal yang pas!">
                             </div>
                             <div class="col-5">
-                                <input type="text" class="form-control" name="kota" placeholder="masukan kota" value="{{!$kota ? "" : $kota}}">
+                                <input type="text" class="form-control" name="kota" placeholder="Cari kotamu disini!" value="{{!$kota ? "" : $kota}}">
                             </div>
                             <div class="col-1">
-                                <input type="submit" value="Filter" class="btn btn-primary">
+                                <input type="submit" value="Filter" class="btn btn-md btn-warning">
                             </div>
                         </div>
                     </form>
@@ -55,10 +55,10 @@
                             <div class="icon-box" style="width:300px;">
                                 <div class="icon"><i class="bx bxl-dribbble"></i></div>
                                 <h4><a href="">{{ $item->nama_acara }}</a></h4>
-                                <small>by {{ $item->penyelenggara }}</small>
-                                <p>Tanggal : {{ $item->tanggal }}</p>
-                                <p>Lokasi : {{ $item->lokasi->nama_lokasi }}</p>
-                                <p>kota : {{ $item->lokasi->kota }}</p>
+                                <small>Penyelenggara: {{ $item->penyelenggara }}</small>
+                                <p>Tanggal: {{ $item->tanggal }}</p>
+                                <p>Lokasi: {{ $item->lokasi->nama_lokasi }}</p>
+                                <p>Kota: {{ $item->lokasi->kota }}</p>
                             </div>
                         </div>
                     @endforeach

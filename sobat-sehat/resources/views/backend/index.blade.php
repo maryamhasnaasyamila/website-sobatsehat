@@ -1,44 +1,41 @@
 @extends('backend.layout.index')
 @section('content')
-<!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Profil Admin</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{{ url('/dashboard')}}">Dashboard</a></li>
-              <li class="breadcrumb-item active">Profil Admin</li>
-            </ol>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
-
-
-
-    <!-- Main content -->
-    <section class="content">
-
-      <div class="container-fluid">
-          <!-- Profile Image -->
-            <div class="card card-primary card-outline">
-              <div class="card-body box-profile">
-                <div class="text-center">
-                  <img class="profile-user-img img-fluid img-circle"
-                       src="{{ asset('backend/assets/dist/img/logo-sobat-sehat.png')}}"
-                       alt="User profile picture">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>Dashboard Admin</h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="{{ url('/dashboard') }}">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Dashboard Admin</li>
+                        </ol>
+                    </div>
                 </div>
+            </div><!-- /.container-fluid -->
+        </section>
+        
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <!-- Profile Image -->
+                <div class="card card-primary card-outline">
+                    <div class="card-body box-profile">
+                        <div class="text-center">
+                            <img class="profile-user-img img-fluid img-circle"
+                                src="{{ asset('backend/assets/dist/img/logo-sobat-sehat.png') }}"
+                                alt="User profile picture">
+                        </div>
 
-                <h3 class="profile-username text-center">Jeruk</h3>
+                        <h3 class="profile-username text-center">Kelompok Jeruk</h3>
 
-                <p class="text-muted text-center">Administrator</p>
+                        <p class="text-muted text-center">Administrator</p>
 
-                {{-- <ul class="list-group list-group-unbordered mb-3">
+                        {{-- <ul class="list-group list-group-unbordered mb-3">
                   <li class="list-group-item">
                     <b>Followers</b> <a class="float-right">1,322</a>
                   </li>
@@ -49,51 +46,152 @@
                     <b>Friends</b> <a class="float-right">13,287</a>
                   </li>
                 </ul> --}}
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
 
-          <div>
-            <!-- About Me Box -->
-            <div class="card card-primary" style="margin: 5wh 10wh 5wh 10wh">
-              <div class="card-header">
-                <h3 class="card-title">Detail Informasi</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <strong><i class="fas fa-address-card"></i> Nama Lengkap</strong>
+                <div style="display:flex; justify-content:center">
+                    <div class="row">
+                        <!-- About Me Box -->
+                        <div class="card col-md-2 card-primary card-outline"
+                            style="width:20vw">
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <strong><i class="fas fa-user-circle"></i> Nama Lengkap</strong>
+                                <p class="text-muted">
+                                    Haura Tsabitah
+                                </p>
+                                <hr>
+                                <strong><i class="fas fa-address-card"></i> NIM </strong>
+                                <p class="text-muted">0110222242</p>
+                                <hr>
+                                <strong><i class="fas fa-star"></i> Kelas </strong>
+                                <p class="text-muted">TI03</p>
+                                <hr>
+                                <strong><i class="fas fa-universal-access"></i> Peran </strong>
+                                <p class="text-muted">Scrum Master</p>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
 
-                <p class="text-muted">
-                  Kelompok 5 Jeruk
-                </p>
+                        <div class="card col-md-2 card-primary card-outline"
+                            style="width:20vw">
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <strong><i class="fas fa-user-circle"></i> Nama Lengkap</strong>
+                                <p class="text-muted">
+                                    Maryam Hasnaa' S.
+                                </p>
+                                <hr>
+                                <strong><i class="fas fa-address-card"></i> NIM </strong>
+                                <p class="text-muted">0110222067</p>
+                                <hr>
+                                <strong><i class="fas fa-star"></i> Kelas </strong>
+                                <p class="text-muted">TI03</p>
+                                <hr>
+                                <strong><i class="fas fa-universal-access"></i> Peran </strong>
+                                <p class="text-muted">Product Owner</p>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
 
-                <hr>
+                        <div class="card col-md-2 card-primary card-outline"
+                            style="width:20vw">
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <strong><i class="fas fa-user-circle"></i> Nama Lengkap</strong>
+                                <p class="text-muted">
+                                    Ufaira Filestine Wafa
+                                </p>
+                                <hr>
+                                <strong><i class="fas fa-address-card"></i> NIM </strong>
+                                <p class="text-muted">0110222164</p>
+                                <hr>
+                                <strong><i class="fas fa-star"></i> Kelas </strong>
+                                <p class="text-muted">TI02</p>
+                                <hr>
+                                <strong><i class="fas fa-universal-access"></i> Peran </strong>
+                                <p class="text-muted">Developer</p>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
 
-                <strong><i class="fas fa-at"></i> Username</strong>
+                        <div class="card col-md-2 card-primary card-outline"
+                            style="width:20vw">
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <strong><i class="fas fa-user-circle"></i> Nama Lengkap</strong>
+                                <p class="text-muted">
+                                    Isma Nabilah Hasibuan
+                                </p>
+                                <hr>
+                                <strong><i class="fas fa-address-card"></i> NIM </strong>
+                                <p class="text-muted">0110222033</p>
+                                <hr>
+                                <strong><i class="fas fa-star"></i> Kelas </strong>
+                                <p class="text-muted"></p>
+                                <hr>
+                                <strong><i class="fas fa-universal-access"></i> Peran </strong>
+                                <p class="text-muted">Developer</p>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
 
-                <p class="text-muted">@jeruk5_rpl</p>
+                        <div class="card col-md-2 card-primary card-outline"
+                            style="width:20vw">
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <strong><i class="fas fa-user-circle"></i> Nama Lengkap</strong>
+                                <p class="text-muted">
+                                    Alvi Sahri Siregar
+                                </p>
+                                <hr>
+                                <strong><i class="fas fa-address-card"></i> NIM </strong>
+                                <p class="text-muted">0110222041</p>
+                                <hr>
+                                <strong><i class="fas fa-star"></i> Kelas </strong>
+                                <p class="text-muted"></p>
+                                <hr>
+                                <strong><i class="fas fa-universal-access"></i> Peran </strong>
+                                <p class="text-muted">Developer</p>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
 
-                <hr>
-
-                <strong><i class="fas fa-lock"></i> Password</strong>
-
-                <p class="text-muted">********</p>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
-          <!-- /.col -->
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-  @if (Auth::user()->role != "admin")
-  <meta http-equiv="refresh" content="0; url=/dashboard/kontributor">
-  {{abort(403)}}
-  @endif
+                        <div class="card col-md-2 card-primary card-outline"
+                            style="width:20vw">
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <strong><i class="fas fa-user-circle"></i> Nama Lengkap</strong>
+                                <p class="text-muted">
+                                    Dzakwan Firdaus
+                                </p>
+                                <hr>
+                                <strong><i class="fas fa-address-card"></i> NIM </strong>
+                                <p class="text-muted"></p>
+                                <hr>
+                                <strong><i class="fas fa-star"></i> Kelas </strong>
+                                <p class="text-muted">0110222207</p>
+                                <hr>
+                                <strong><i class="fas fa-universal-access"></i> Peran </strong>
+                                <p class="text-muted">Developer</p>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+                <!-- /.col -->
+                <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    @if (Auth::user()->role != 'admin')
+        <meta http-equiv="refresh" content="0; url=/dashboard/kontributor">
+        {{ abort(403) }}
+    @endif
 @endsection

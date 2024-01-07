@@ -53,7 +53,7 @@
                         <div class="col-xl-3 mb-3 col-md-4 d-flex align-items-stretch" data-aos="zoom-in"
                             data-aos-delay="100">
                             <div class="icon-box" style="width:300px;">
-                                <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                                <div class="icon"><i class="bx bx-calendar-star"></i></div>
                                 <h4><a href="">{{ $item->nama_acara }}</a></h4>
                                 <small>Penyelenggara: {{ $item->penyelenggara }}</small>
                                 <p>Tanggal: {{ $item->tanggal }}</p>

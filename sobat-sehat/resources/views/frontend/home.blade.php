@@ -11,7 +11,7 @@
                 <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
                     data-aos="fade-up" data-aos-delay="200">
                     <h1>Bersama Sobat Sehat</h1>
-                    <h2>Lestarikan budaya dan tingkatkan kesehatan indonesia!</h2>
+                    <h2>Lestarikan budaya dan tingkatkan kesehatan Indonesia!</h2>
 
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
@@ -41,7 +41,7 @@
                                 <input type="text" class="form-control" name="kota" placeholder="Cari kotamu disini!" value="{{!$kota ? "" : $kota}}">
                             </div>
                             <div class="col-1">
-                                <input type="submit" value="Filter" class="btn btn-md btn-warning">
+                                <input type="submit" value="Filter" class="btn btn-md btn-info">
                             </div>
                         </div>
                     </form>

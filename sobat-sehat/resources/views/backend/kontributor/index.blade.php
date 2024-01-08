@@ -5,7 +5,9 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Daftar Kontributor</h1>
+
+                        <h1>
+                            Daftar Kontributor</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -38,7 +40,9 @@
                                         </div>
                                         <meta http-equiv="refresh" content="3;url=/dashboard/kontributor">
                                     @endif
-                                    <h4 style="margin-bottom:0.5vw" class="card-title">Data Kontributor</h4>
+                                    <h4 style="margin-bottom:0.5vw" class="card-title"><i class="fa fa-cubes"
+                                            aria-hidden="true"></i>
+                                        Data Kontributor</h4>
                                     <thead class="table-primary">
                                         <tr>
                                             <th> No </th>

@@ -35,13 +35,15 @@
                         @csrf
                         <div class="row">
                             <div class="col-5">
-                                <input type="date" class="form-control" value="{{!$tanggal ? "" : $tanggal}}" name="tanggal" placeholder="Cari tanggal yang pas!">
+                                <input type="date" class="form-control" value="{{ !$tanggal ? '' : $tanggal }}"
+                                    name="tanggal" placeholder="Cari tanggal yang pas!">
                             </div>
                             <div class="col-5">
-                                <input type="text" class="form-control" name="kota" placeholder="Cari kotamu disini!" value="{{!$kota ? "" : $kota}}">
+                                <input type="text" class="form-control" name="kota" placeholder="Cari kotamu disini!"
+                                    value="{{ !$kota ? '' : $kota }}">
                             </div>
                             <div class="col-1">
-                                <input type="submit" value="Filter" class="btn btn-md btn-info">
+                                <input type="submit" value="Filter" class="btn btn-md btn-secondary">
                             </div>
                         </div>
                     </form>
@@ -55,10 +57,12 @@
                             <div class="icon-box" style="width:300px;">
                                 <div class="icon"><i class="bx bx-calendar-star"></i></div>
                                 <h4><a href="">{{ $item->nama_acara }}</a></h4>
-                                <small>Penyelenggara: {{ $item->penyelenggara }}</small>
-                                <p>Tanggal: {{ $item->tanggal }}</p>
-                                <p>Lokasi: {{ $item->lokasi->nama_lokasi }}</p>
-                                <p>Kota: {{ $item->lokasi->kota }}</p>
+                                <small>Oleh. {{ $item->penyelenggara }}</small>
+                                <div class="card" style="padding:1vw; margin-top:1vw;">
+                                    <p><i class='bx bx-calendar'></i> Tanggal: {{ $item->tanggal }}</p>
+                                    <p><i class='bx bx-current-location' ></i> Lokasi: {{ $item->lokasi->nama_lokasi }}</p>
+                                    <p><i class='bx bxs-city' ></i> Kota/Kabupaten: {{ $item->lokasi->kota }}</p>
+                                </div>
                             </div>
                         </div>
                     @endforeach

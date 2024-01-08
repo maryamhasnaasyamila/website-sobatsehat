@@ -17,7 +17,7 @@
         </div>
         <div class="card">
             <div class="card-body">
-                <h3>Tambah Data Kontributor</h3><br />
+                <h4>Tambah Data Kontributor</h4><br />
                 {{-- menampilkan error validasi --}}
                 @if (count($errors) > 0)
                     <div class="alert alert-danger">

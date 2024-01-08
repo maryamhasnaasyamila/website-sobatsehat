@@ -20,7 +20,7 @@
         <section class="content">
             <div class="container-fluid">
                 <div style="margin-bottom:0.5vw">
-                    <a href="/dashboard/jadwal/create" class="btn btn-sm btn-warning">
+                    <a href="/dashboard/jadwal/create" class="btn btn-sm btn-outline-dark">
                         <i class="fa fa-plus-square" aria-hidden="true"></i>
                         Data Jadwal
                     </a>
@@ -37,7 +37,9 @@
                                         </div>
                                         <meta http-equiv="refresh" content="3;url=/dashboard/jadwal">
                                     @endif
-                                    <h4 class="card-title" style="margin-bottom:0.5vw">Acara Terkini</h4>
+                                    <h4 class="card-title" style="margin-bottom:0.5vw"><i class="fa fa-leaf"
+                                            aria-hidden="true"></i>
+                                        Acara Terkini</h4>
                                     <thead class="table-primary">
                                         <tr>
                                             <th> No </th>
@@ -65,7 +67,8 @@
                                                     <a href="{{ url('/dashboard/jadwal/edit', $jdwl->id) }}"
                                                         class="btn btn-sm btn-warning">Edit</a>
                                                     <form class="d-inline"
-                                                        action="{{ url('/dashboard/jadwal/destroy', $jdwl->id) }}" method="post">
+                                                        action="{{ url('/dashboard/jadwal/destroy', $jdwl->id) }}"
+                                                        method="post">
                                                         @csrf
                                                         @method('delete')
                                                         <button class="btn btn-sm btn-danger" type="submit">Delete</button>

@@ -52,7 +52,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <a href="/dashboard/kontributor" class="btn btn-sm btn-warning float-right"
+                                <a href="/dashboard/kontributor" class="btn btn-sm btn-outline-dark float-right"
                                     style="margin-top: 20px"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
                                     Back</a>
 

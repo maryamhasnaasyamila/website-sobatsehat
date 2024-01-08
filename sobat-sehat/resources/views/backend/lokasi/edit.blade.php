@@ -22,7 +22,7 @@
             <div class="container-fluid">
                 <div class="card">
                     <div class="card-body">
-                        <h3>Edit Data Lokasi Acara </h3><br />
+                        <h4>Edit Data Lokasi Acara </h4><br />
                         {{-- menampilkan error validasi --}}
                         @if (count($errors) > 0)
                             <div class="alert alert-danger">
@@ -68,7 +68,7 @@
                                 style="margin-right: 5px">Save
                             </button>
                         </form>
-                        <a href="/dashboard/lokasi" class="btn btn-sm btn-warning"><i class="fa fa-arrow-circle-left"
+                        <a href="/dashboard/lokasi" class="btn btn-sm btn-outline-dark"><i class="fa fa-arrow-circle-left"
                                 aria-hidden="true"></i>
                             Back</a>
                     </div>

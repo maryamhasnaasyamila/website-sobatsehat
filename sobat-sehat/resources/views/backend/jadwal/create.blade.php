@@ -11,7 +11,7 @@
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ url('/dashboard') }}">Dashboard</a></li>
                             <li class="breadcrumb-item"><a href="{{ url('/dashboard/jadwal') }}">Daftar Jadwal Acara</a></li>
-                            <li class="breadcrumb-item active">Add Data</li>
+                            <li class="breadcrumb-item active">Tambah Data</li>
                         </ol>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
             <div class="container-fluid">
                 <div class="card">
                     <div class="card-body">
-                        <h3>Tambah Data Jadwal Acara</h3><br />
+                        <h4>Tambah Data Jadwal Acara</h4><br />
                         {{-- menampilkan error validasi --}}
                         @if (count($errors) > 0)
                             <div class="alert alert-danger">

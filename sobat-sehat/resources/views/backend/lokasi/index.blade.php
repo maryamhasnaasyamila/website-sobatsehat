@@ -20,7 +20,7 @@
         <section class="content">
             <div class="container-fluid">
                 <div style="margin-bottom:0.5vw">
-                    <a href="/dashboard/lokasi/create" class="btn btn-sm btn-warning">
+                    <a href="/dashboard/lokasi/create" class="btn btn-sm btn-outline-dark">
                         <i class="fa fa-plus-square" aria-hidden="true"></i>
                         Data Lokasi
                     </a>
@@ -37,7 +37,10 @@
                                         </div>
                                         <meta http-equiv="refresh" content="3;url=/dashboard/lokasi">
                                     @endif
-                                    <h4 style="margin-bottom:0.5vw" class="card-title">Data Lokasi</h4>
+                                    <h4 style="margin-bottom:0.5vw" class="card-title">
+                                        <i class="fa fa-street-view" aria-hidden="true"></i>
+                                        Data Lokasi
+                                    </h4>
                                     <thead class="table-primary">
                                         <tr>
                                             <th> No </th>

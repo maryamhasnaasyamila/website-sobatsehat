@@ -5,7 +5,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Daftar Jadwal Acara</h1>
+                        <h1>Daftar Jadwal</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -22,7 +22,7 @@
             <div class="container-fluid">
                 <div class="card">
                     <div class="card-body">
-                        <h3>Edit Data Jadwal Acara</h3><br />
+                        <h4>Edit Data Jadwal Acara</h4><br />
                         {{-- menampilkan error validasi --}}
                         @if (count($errors) > 0)
                             <div class="alert alert-danger">
@@ -82,7 +82,7 @@
                                 style="margin-right: 5px">Save
                             </button>
                         </form>
-                        <a href="/dashboard/jadwal" class="btn btn-sm btn-warning"><i class="fa fa-arrow-circle-left"
+                        <a href="/dashboard/jadwal" class="btn btn-sm btn-outline-dark"><i class="fa fa-arrow-circle-left"
                                 aria-hidden="true"></i>
                             Back</a>
                     </div>

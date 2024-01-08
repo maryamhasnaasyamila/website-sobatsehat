@@ -18,7 +18,7 @@
                 </div>
             </div><!-- /.container-fluid -->
         </section>
-        
+
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
@@ -109,7 +109,7 @@
                                 <p class="text-muted">0110222164</p>
                                 <hr>
                                 <strong><i class="fas fa-star"></i> Kelas </strong>
-                                <p class="text-muted">TI02</p>
+                                <p class="text-muted">TI01</p>
                                 <hr>
                                 <strong><i class="fas fa-universal-access"></i> Peran </strong>
                                 <p class="text-muted">Developer</p>
@@ -130,7 +130,7 @@
                                 <p class="text-muted">0110222033</p>
                                 <hr>
                                 <strong><i class="fas fa-star"></i> Kelas </strong>
-                                <p class="text-muted"></p>
+                                <p class="text-muted">TI02</p>
                                 <hr>
                                 <strong><i class="fas fa-universal-access"></i> Peran </strong>
                                 <p class="text-muted">Developer</p>
@@ -151,7 +151,7 @@
                                 <p class="text-muted">0110222041</p>
                                 <hr>
                                 <strong><i class="fas fa-star"></i> Kelas </strong>
-                                <p class="text-muted"></p>
+                                <p class="text-muted">TI06</p>
                                 <hr>
                                 <strong><i class="fas fa-universal-access"></i> Peran </strong>
                                 <p class="text-muted">Developer</p>
@@ -169,10 +169,10 @@
                                 </p>
                                 <hr>
                                 <strong><i class="fas fa-address-card"></i> NIM </strong>
-                                <p class="text-muted"></p>
+                                <p class="text-muted">0110222207</p>
                                 <hr>
                                 <strong><i class="fas fa-star"></i> Kelas </strong>
-                                <p class="text-muted">0110222207</p>
+                                <p class="text-muted">TI06</p>
                                 <hr>
                                 <strong><i class="fas fa-universal-access"></i> Peran </strong>
                                 <p class="text-muted">Developer</p>

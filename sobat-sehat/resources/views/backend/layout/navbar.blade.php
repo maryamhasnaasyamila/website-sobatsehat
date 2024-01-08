@@ -35,7 +35,7 @@
 
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img src="{{ asset('backend/assets/dist/img/logo-sobat-sehat.png') }}" alt="image">
+            <img src="{{ asset('backend/assets/dist/img/logo-sobatsehat.png') }}" style="width:20%" alt="image">
         </div>
 
         <!-- Navbar -->
@@ -84,7 +84,7 @@
                 <li class="nav-item">
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
-            document.getElementById('logout-form').submit();">
+                        document.getElementById('logout-form').submit();">
                         Role: {{ Auth::user()->role }}
                         <i style="margin-left:3vw;" class="nav-icon fa fa-power-off" aria-hidden="true"></i>
 

@@ -60,10 +60,31 @@
                                 <small>Oleh. {{ $item->penyelenggara }}</small>
                                 <div class="card" style="padding:1vw; margin-top:1vw;">
                                     <p><i class='bx bx-calendar'></i> Tanggal: {{ $item->tanggal }}</p>
-                                    <p><i class='bx bx-current-location' ></i> Lokasi: {{ $item->lokasi->nama_lokasi }}</p>
-                                    <p><i class='bx bxs-city' ></i> Kota/Kabupaten: {{ $item->lokasi->kota }}</p>
+                                    <p><i class='bx bx-current-location'></i> Lokasi: {{ $item->lokasi->nama_lokasi }}</p>
+                                    <p><i class='bx bxs-city'></i> Kota/Kabupaten: {{ $item->lokasi->kota }}</p>
+                                    {{-- <p><i class='bx bx-note'></i> Alamat: {{ $item->lokasi->alamat }}</p> --}}
+                                    <a href="{{ url('frontend.home') }}" class="portfolio-lightbox preview-link"
+                                        title="
+                                        <div>
+                                        <h4>Nama Acara</h4>
+                                        <q> {{ $item->nama_acara }} </q> </br></br>
+                                        <h4>Penyelenggara</h4>
+                                        <q> {{ $item->penyelenggara }} </q> </br></br>
+                                        <h4>Tanggal Pelaksanaan</h4>
+                                        <q> {{ $item->tanggal }} </q> </br></br>
+                                        <h4>Lokasi Acara</h4>
+                                        <q> {{ $item->lokasi->nama_lokasi }} </q> </br></br>
+                                        <h4>Kota/Kabupaten</h4>
+                                        <q> {{ $item->lokasi->kota }} </q> </br></br>
+                                        <h4>Detail Alamat</h4>
+                                        <q> {{ $item->lokasi->alamat }} </q> </div>">
+
+                                        {{-- <i class="bx bx-note"></i> --}}
+                                        <small>View Detail...</small>
+                                    </a>
                                 </div>
                             </div>
+
                         </div>
                     @endforeach
                 </div><br>
